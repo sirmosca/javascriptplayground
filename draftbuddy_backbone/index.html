@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Draft Buddy - backbone</title>
+		<link href="js/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<section id='mainView'>
+			<section id='optionsList'> 
+				<input type='checkbox' id='show-drafted'>Show Drafted?
+				<input type='checkbox' id='show-qb'>Show QB<br>
+			</section>
+			<section id='playerSection' >
+				<ul id='playerList'>
+				</ul>
+			</section>
+        </section>
+
+		<script type="text/template" id="player-template">
+			<%= name %>
+			<%= adp %>
+			<select id="fantasyTeamId" >
+				<% fantasyTeams.each(function(team) { %>
+					<option value="<%= team.get('name') %>"><%= team.get('name') %></option>
+				<% }); %>
+			</select>
+			<input type="checkbox" id="watch-player" />
+		</script>
+
+		<script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+		<script type="text/javascript" src="js/underscore.js"></script>
+		<script type="text/javascript" src="js/backbone.js"></script>
+		<script type="text/javascript" src="js/draftbuddy-app.js"></script>
+		<script src="js/bootstrap/js/bootstrap.min.js"></script>
+	</body>
+</html>

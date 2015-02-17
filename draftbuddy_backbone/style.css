@@ -1,0 +1,14 @@
+
+#fantasyTeamId {
+	color: black;
+}
+
+.player-drafted { 
+	background-color: gray;
+	color: white;
+}
+
+#playerList {
+	list-style-type: none;
+	padding: 0;
+}
